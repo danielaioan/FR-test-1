@@ -1,14 +1,23 @@
-%h1 Home#index
-%p Find me in app/views/home/index.html.erb
-
-- @months.each do |m|
-  =m
-  %br
-
 %br
 
-- @days.each do |d|
-  =d
-  %br
+.col-md-4
+  .panel.panel-default
+    .panel-heading
+      %h4
+        Monate
+    .panel-body.list-group
+      - @months.each do |m|
+        %li.list-group-item
+          = m
+          %br
 
-
+.col-md-4
+  .panel.panel-default
+    .panel-heading
+      %h4
+        Tage
+    .panel-body.list-group
+      - @days.each do |d|
+        %li.list-group-item
+          = d
+          %br
