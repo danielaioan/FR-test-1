@@ -2,13 +2,14 @@
 
 - @months.each do |m|
     = m
-    %br
-
-
+    
+%br
 - @days.each do |d|
     = d
-    %br
 
-         
-.col-md-12
-  = link_to "Contact/About", contact_path
+%br    
+%br        
+= button_to "Contact", contact_path, :method => :get
+
+%br
+= button_to "About", contact_about_path, :method => :get
