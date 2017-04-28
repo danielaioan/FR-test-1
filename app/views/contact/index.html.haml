@@ -1,0 +1,20 @@
+%br
+
+.col-md-12
+  = form_tag( contact_path, :method => :get, :multipart => false ) do 
+    Name
+    %br
+    = text_field_tag "Name"
+    %br
+    Lastname
+    %br
+    = text_field_tag "Lastname"
+    %br
+    Message
+    %br
+    = text_area_tag "Message", "", :size=>"30x4"
+    %br
+    = submit_tag 'Submit', class: "btn btn-default"
+
+
+  = link_to 'Back', root_path, class: "btn btn-default"

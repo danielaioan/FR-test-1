@@ -1,23 +1,14 @@
 %br
 
-.col-md-4
-  .panel.panel-default
-    .panel-heading
-      %h4
-        Monate
-    .panel-body.list-group
-      - @months.each do |m|
-        %li.list-group-item
-          = m
-          %br
+- @months.each do |m|
+    = m
+    %br
 
-.col-md-4
-  .panel.panel-default
-    .panel-heading
-      %h4
-        Tage
-    .panel-body.list-group
-      - @days.each do |d|
-        %li.list-group-item
-          = d
-          %br
+
+- @days.each do |d|
+    = d
+    %br
+
+         
+.col-md-12
+  = link_to "Contact/About", contact_path
