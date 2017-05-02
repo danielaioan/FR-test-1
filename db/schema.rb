@@ -53,18 +53,13 @@ ActiveRecord::Schema.define(version: 20170502145404) do
     t.integer "production_country_id", null: false
   end
 
-  create_table "prodution_companies", force: :cascade do |t|
+  create_table "production_companies", force: :cascade do |t|
     t.string "name"
   end
 
-  create_table "prodution_countries", force: :cascade do |t|
+  create_table "production_countries", force: :cascade do |t|
     t.string "name"
     t.string "iso_3166_1"
-  end
-
-  create_table "spoken_languages", force: :cascade do |t|
-    t.string "name"
-    t.string "iso_639_1"
   end
 
 end
