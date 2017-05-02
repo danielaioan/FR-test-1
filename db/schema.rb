@@ -11,10 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170502142407) do
+ActiveRecord::Schema.define(version: 20170502145404) do
 
   create_table "genres", force: :cascade do |t|
     t.string "name"
+  end
+
+  create_table "genres_movies", id: false, force: :cascade do |t|
+    t.integer "movie_id", null: false
+    t.integer "genre_id", null: false
   end
 
   create_table "movies", force: :cascade do |t|
@@ -36,6 +41,16 @@ ActiveRecord::Schema.define(version: 20170502142407) do
     t.string  "tagline"
     t.float   "vote_average"
     t.integer "vote_count"
+  end
+
+  create_table "movies_production_companies", id: false, force: :cascade do |t|
+    t.integer "movie_id",              null: false
+    t.integer "production_company_id", null: false
+  end
+
+  create_table "movies_production_countries", id: false, force: :cascade do |t|
+    t.integer "movie_id",              null: false
+    t.integer "production_country_id", null: false
   end
 
   create_table "prodution_companies", force: :cascade do |t|
