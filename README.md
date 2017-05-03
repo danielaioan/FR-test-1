@@ -49,6 +49,12 @@ Then visit:  http://localhost:3000/ in your browser to check the movies index.
 
 If you're new to rails, no panic; Everything you'll need is available as class variable on the your views.
 
-* The three views are located in `/views/movies/index.html.haml`, `/views/movies/show.html.haml` and `/views/genre/show.html.haml`
-* Check `/app/controllers/movies_controller.rb` and `/app/controllers/genres_controller.rb`
-* The movies catalog takes a "page" parameter and gives you the first page is no parameters are passed. But you can access other pages with `http://localhost:3000/?page=2`, for example. If you're going to build a pagination. YOu can also get the total amount of pages with `@movies.total_pages`
+* We have three views. they are located in `/views/movies/index.html.haml`, `/views/movies/show.html.haml` and `/views/genre/show.html.haml`
+
+* If you never worked with HAML before, take 5 minutes a look at `http://haml.info/tutorial.html`. Congrats. You are now a HAML master. Same applies for SASS. Should be fairly trivial to work with if you have domain over vanilla CSS (or you can just rename `application.sass` to `application.scss` which will accept vanilla CSS as valid sytax).
+
+* Add your css to `/assets/stylesheets/application.sass` and you JS to `/assets/javascript/application.js`. You can also add separate files and load only import those on `application.sass` and `application.js`.
+
+* The two controllers of the application are `/controllers/movies_controller.rb` and `/controllers/genres_controller.rb`. You won't need to do anything there. That's where all variables available in the view are declared.
+
+* The movies route takes a "page" parameter and gives you the first page is no parameters are passed. But you can access other pages with `http://localhost:3000/?page=2`, for example. If you're going to build a pagination. You can also get the total amount of pages with `@movies.total_pages`
