@@ -28,7 +28,7 @@ First of all, clone this repo:
 git clone https://github.com/ecratum/FR-test.git
 ```
 
-Install de dependencies by navigating to the project folder you need and run:
+Install de dependencies by navigating to the project folder you need and runnin:
 ```
 bundle install
 ```
