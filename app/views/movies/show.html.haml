@@ -1,4 +1,9 @@
+%hr
 Showing Movie:
-%br
-= @movie
-%br
+%hr
+= @movie.title
+.img-wrapper= image_tag("/posters/#{@movie.poster_path}")
+
+= @movie.as_json
+%hr
+= link_to "< Back to Index", root_path

@@ -1,9 +1,16 @@
-Showing Genre:
-%br
-= @genre
-%br
 
+%hr
+Showing Genre:
+%hr
+%br
+= @genre.name
+%br
+%br
+%hr
 Which has movies like:
-%br
-= @movies
-%br
+%hr
+- @movies.each do |movie|
+  = link_to movie.title, movies_path(movie.id)
+  %br
+%hr
+= link_to "< Back to Index", root_path
