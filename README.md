@@ -4,7 +4,39 @@ One Paragraph of project description goes here
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+Install First:
+Ruby 2+
+Rails 4+
+Bundler
+
+You can check how to do that here:   https://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm
+
+After installation you need to clone this repo:
+``` 
+git clone https://github.com/ecratum/FR-test.git
+```
+
+Then on the project folder you need to run:
+```
+bundle install
+```
+
+Next step is to set the database. To do that run these commands:
+```
+rake db:drop
+rake db:create
+rake db:migrate
+rake db:seed
+```
+
+To start a server use:
+```
+rails server
+```
+
+Then visit:  http://localhost:3000/  in your browser.
+
+
 
 ### Prerequisites
 
