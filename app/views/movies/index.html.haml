@@ -1,9 +1,11 @@
 All Movies:
 %br
-= @movies
-%br
+- @movies.each do |movie|
+  = link_to movie.title, movies_path(movie.id)
+  %br
+%hr
 
 All Genres
-%br
-= @genres
-%br
+- @genres.each do |genre|
+  = link_to genre.name, genres_path(genre.id)
+  %br
