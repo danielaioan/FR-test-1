@@ -45,7 +45,7 @@ rails server
 
 Then visit:  http://localhost:3000/ in your browser to check the movies index.
 
-### New to Rails?
+### Not a Rails master?
 
 If you're new to rails, no panic; Everything you'll need is available as class variable on the your views.
 
