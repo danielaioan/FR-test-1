@@ -5,9 +5,9 @@ One Paragraph of project description goes here
 ## Getting Started
 
 Install First:
-Ruby 2+
-Rails 4+
-Bundler
+* Ruby 2+
+* Rails 4+
+* Bundler
 
 You can check how to do that here:   https://www.tutorialspoint.com/ruby-on-rails/rails-installation.htm
 
