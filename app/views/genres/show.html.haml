@@ -1,16 +1,24 @@
+%header
+  .container
+    .row
+      .col-lg-4.col-md-5.col-xs-11
+        %a{:href => "/"} Moovelo
 
-%hr
-Showing Genre:
-%hr
-%br
-= @genre.name
-%br
-%br
-%hr
-Which has movies like:
-%hr
-- @movies.each do |movie|
-  = link_to movie.title, movies_path(movie.id)
-  %br
-%hr
-= link_to "< Back to Index", root_path
+      .col-lg-8.col-md-7.col-xs-1
+        %form
+          .form-group.row
+            .col-10
+              %input#example-search-input.form-control{:type => "search", :value => "Search for a movie"}/
+
+
+%main
+  .container.genres
+    %h1
+      = @genre.name
+      Movies
+    %ul
+      - @movies.each do |movie|
+        %li
+          = link_to movie.title, movies_path(movie.id)
+
+    = link_to "< Back to Index", root_path
